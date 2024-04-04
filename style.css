@@ -1,0 +1,7 @@
+.navbar.navbar-light.bg-light {
+    background-color: #E4422B !important;
+    border-bottom: 1px solid #e3e7eb;
+}
+.navbar.navbar-light .navbar-nav .nav-link {
+    color: #F0CC76 !important;
+  }
