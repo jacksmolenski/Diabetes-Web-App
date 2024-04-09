@@ -1,7 +1,60 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 120px; /* Height of the footer plus extra margin */
+    background-color: #222629; /* Background color of the body */
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px; /* Height of the footer */
+    background-color: #86C232; /* Background color of the footer */
+}
 .navbar.navbar-light.bg-light {
-    background-color: #E4422B !important;
-    border-bottom: 1px solid #e3e7eb;
+    background-color: #86C232 !important;
+    border-bottom: 1px solid #61892F;
 }
 .navbar.navbar-light .navbar-nav .nav-link {
-    color: #F0CC76 !important;
-  }
+    color: #222629 !important;
+}
+
+.nav-link.active {
+    border: 1px solid #61892F !important;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+
+.navbar-brand {
+    font: 400 1.5em/1.5em 'Shrikhand', sans-serif !important;
+}
+
+.mainbody {
+    background-color: #222629;
+}
+
+.container0{
+    background-color: #86C232 !important;
+    border-radius: 5px !important;
+    padding: 10px;
+    margin: 10px 0;
+}
+.container1 {
+    background-color: #86C232 !important;
+    border-radius: 5px !important;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.container2 {
+    background-color: #474B4F !important;
+    color: #86C232 !important;
+    border-radius: 5px !important;
+    padding: 10px;
+    margin: 10px 0;
+}

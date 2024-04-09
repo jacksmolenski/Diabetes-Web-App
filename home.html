@@ -1,49 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Home Page</title>
-        <link rel="stylesheet" href="style.css">
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    </head>
-    <body>
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">
-                <img src="angryBear.png" width="30" height="30" class="d-inline-block align-top" alt="Your Logo">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="tips.html">Tips</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="data.html">Data Analysis</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="story.html">My Story</a>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
-        </header>
-        <main>
-            <h1>Welcome to my website</h1>
-            <p>This is a paragraph of text that will be displayed on the home page.</p>
-        </main>
-        <footer>
-            <p>&copy; 2024 My Website</p>
-        </footer>
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+</head>
+<body class="mainbody">
+  <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">
+          Diabeazy
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tips.html">Tips</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="data.html">Data Analysis</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="story.html">My Story</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+  </header>
+  <main class="container mt-5">
+    <div class="row">
+        <div class="col-md-8">
+            <section>
+              <div class="container1">
+                  <h1>Diabetes Done Easy</h1>
+                  <p class="lead">The goal of this website is to help those who are struggling with diabetes.
+                    More specifically, I want the use of this website to be shortlasted for those who find it
+                    because I understand nobody wants diabetes to consume their life. I have lived with 
+                    Diabetes since I was 15 months old, and would like to share what I have found useful to keep 
+                    my mental and physical health in peak shape.
+                  </p>
+              </div>
+            </section>
+        </div>
+        <div class="col-md-4">
+          <section>
+            <div class="container2">
+                <h1>Track My Blood Sugar!</h1>
+                <p class="lead">
+                  Fill with my data
+                </p>
+            </div>
+            <div class="container2">
+              <h1>Contact Me!</h1>
+              <p class="lead">
+                Email: <a href= "mailto: jacksmo19@gmail.com">jacksmo19@gmail.com</a><br>
+                Instagram: <a href="https://www.instagram.com/jacksmolenski/">@jacksmolenski</a>
+          </div>
+          </section>
+        </div>
+    </div>
+</main>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        
-    </body>
+<footer class="mt-5">
+    <p>&copy; 2024 My Website</p>
+</footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+</body>
 </html>
