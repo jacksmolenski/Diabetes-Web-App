@@ -67,4 +67,25 @@ footer {
     background-color: transparent; /* Remove the background color on hover */
     color: #ccc; /* Change text color on hover */
   }
+
+  .slideshow-container {
+    position: relative;
+    max-width: 600px; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* Center the slideshow horizontally */
+  }
+  
+  .slideshow-item img {
+    width: 100%; /* Make the images responsive */
+    height: auto;
+    display: block; /* Ensure the images are centered */
+    margin: 0 auto; /* Center the images horizontally */
+    max-width: 100%; /* Ensure images don't exceed the container width */
+  }
+  
+  
+  .slideshow-item img {
+    width: 100%;
+    height: auto;
+  }
+  
   
