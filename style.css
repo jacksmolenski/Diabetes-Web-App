@@ -46,6 +46,13 @@ footer {
     padding: 10px;
     margin: 10px 0;
 }
+
+.container3 {
+    background-color: #6b6e70 !important;
+    border-radius: 25px !important;
+    padding: 10px;
+    margin: 10px 0;
+}
  
 #backToTopBtn {
     display: none; /* Hide the button by default */
@@ -81,11 +88,6 @@ footer {
     margin: 0 auto; /* Center the images horizontally */
     max-width: 100%; /* Ensure images don't exceed the container width */
   }
-  
-  
-  .slideshow-item img {
-    width: 100%;
-    height: auto;
-  }
+
   
   
