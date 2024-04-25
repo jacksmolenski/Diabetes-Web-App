@@ -83,7 +83,7 @@ app.get(
   }
 );
 
-app.get('/auth/dexcom/home', (req, res) => {
+app.get('/home', (req, res) => {
   res.render('home');
 });
 // Starting the server
