@@ -4,6 +4,7 @@ footer {
     height: 60px; /* Height of the footer */
     background-color: #498BBE !important;
     flex-shrink: 0;
+    bottom: 0;
 }
 
 .logo {
