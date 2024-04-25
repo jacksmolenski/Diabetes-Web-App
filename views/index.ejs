@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dexcom Auth Example</title>
+</head>
+<body>
+    <h1>Welcome to Dexcom Authentication App!</h1>
+    <% if (user) { %>
+        <h2>Authenticated as <%= user.displayName %></h2>
+        <p>Access Token: <%= user.accessToken %></p>
+        <!-- Logout button -->
+        <a href="/logout">Logout</a>
+    <% } else { %>
+        <!-- Link to perform Dexcom authentication -->
+        <a href="/auth/dexcom">Login with Dexcom</a>
+    <% } %>
+</body>
+</html>

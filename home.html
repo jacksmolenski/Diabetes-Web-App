@@ -13,9 +13,7 @@
 <body class="mainbody">
   <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="#">
-          Diabeazy
-          </a>
+          <img src="photos/diabeazy.png" alt="Logo" class="logo">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -91,7 +89,9 @@
             <div class="container2">
                 <h1>Track My Blood Sugar!</h1>
                 <p class="lead">
-                  Fill with my data
+                  <div id="data-container">
+                    <% data1.join(", ") %>
+                </div>
                 </p>
             </div>
             <div class="container2">
@@ -114,6 +114,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  
+
 </body>
 </html>

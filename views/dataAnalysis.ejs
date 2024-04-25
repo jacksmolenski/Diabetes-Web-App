@@ -56,7 +56,7 @@
                 <p>Inspirational / Suggestion</p>
             </div>
             <div class="col-lg-4 container1">
-                <p>Blood Sugar!</p>
+                <%= data1 %>
             </div>
             <div class="col-lg-4 container2">
                 <p>A1C tracker / blood sugar average over last 7 days</p>
@@ -97,5 +97,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        let myData = <%- JSON.stringify( data1)%>;
+          console.log(myData);
+      </script>
 </body>
 </html>
