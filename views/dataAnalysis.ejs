@@ -10,7 +10,7 @@
 <body class="mainbody">
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <img src="photos/diabeazy.png" alt="Logo" class="logo">
+            <img src="http://localhost:3000/photos/diabeazy.png" alt="Logo" class="logo">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -18,16 +18,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="home.html">Home</a>
+                        <a class="nav-link" href="http://127.0.0.1:3000/views/home.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="tips.html">Tips</a>
+                        <a class="nav-link" href="http://127.0.0.1:3000/views/tips.html">Tips</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="data.html">Data Analysis</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/story.html">My Story</a>
+                        <a class="nav-link" href="http://127.0.0.1:3000/views/story.html">My Story</a>
                     </li>
                 </ul>
             </div>
@@ -50,20 +50,29 @@
         </div>
         </div>
         <div class="row">
-            <div class="col-lg-4 container2">
+            <div class="col-lg-4 container4">
                 <p>Inspirational / Suggestion</p>
-                <% if (average < 100) { %>
-                  <p>Less insulin!</p>
-                <% } else if (average >= 100 && average <= 180) { %>
-                  <p>Doing great!</p>
+                <% if (average < 80) { %>
+                  <p class="message">Try using less insulin. It can be dangerous to be this low.
+                    Or try eating slightly more. Either way, work on getting your
+                    blood sugar up!  
+                  </p>
+                <% } else if (average >= 80 && average <= 180) { %>
+                  <p class="message">Awesome! Be proud! Now keep in mind what worked best to
+                    get your blood sugar in this range. Keep that up and you'll be living much
+                    healthier!
+                  </p>
                 <% } else { %>
-                  <p>More insulin!</p>
+                  <p class="message">There are a few things to try. Eat less, use a bit more insulin
+                    , or become more active. As for the insulin, either up your basal rates, or
+                    up your boluses when you eat. Good luck!
+                  </p>
                 <% } %>
             </div>
             <div class="col-lg-4 container1">
                 <canvas id="myChart" width="200" height="200"></canvas>
             </div>
-            <div class="col-lg-4 container2">
+            <div class="col-lg-4 container4">
                 <p>Blood sugar average over last 24 hours</p>
                 <!-- Assuming you have a div with id="averageDisplay" where you want to display the average -->
                 <div id="averageDisplay" class="average">

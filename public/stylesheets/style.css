@@ -62,6 +62,14 @@ footer {
     padding: 10px;
     margin: 10px 0;
 }
+
+.container4 {
+    background-color: #085F63 !important;
+    color: white !important;
+    border-radius: 5px !important;
+    padding: 10px;
+    margin: 10px 0;
+}
  
 #backToTopBtn {
     display: none; /* Hide the button by default */
@@ -101,7 +109,10 @@ footer {
   .average {
     font-size: 5.5em;
     font-weight: bold;
-    color: white;
+  }
+
+  .message {
+    font-size: 1.5em;
   }
   
   
