@@ -83,6 +83,9 @@ app.get(
   }
 );
 
+app.get('/auth/dexcom/home', (req, res) => {
+  res.render('home');
+});
 // Starting the server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
