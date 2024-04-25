@@ -16,7 +16,7 @@ passport.use(new OAuth2Strategy({
     tokenURL: 'https://sandbox-api.dexcom.com/v2/oauth2/token',
     clientID: process.env.DEXCOM_CLIENT_ID,
     clientSecret: process.env.DEXCOM_CLIENT_SECRET,
-    callbackURL: "http://localhost:3000/auth/dexcom/callback"
+    callbackURL: "http://diabeazy.uk.r.appspot.com/auth/dexcom/callback"
   },
   function(accessToken, refreshToken, profile, cb) {
     // In a production app, you might store these tokens in the user's session
