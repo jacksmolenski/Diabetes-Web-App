@@ -6,19 +6,22 @@ require('dotenv').config();
 const axios = require('axios');
 const app = express();
 const PORT = process.env.PORT || 3000;
+var path = require('path');
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Passport configuration
 passport.use(new OAuth2Strategy({
-  authorizationURL: 'https://sandbox-api.dexcom.com/v2/oauth2/login',
-  tokenURL: 'https://sandbox-api.dexcom.com/v2/oauth2/token',
-  clientID: process.env.DEXCOM_CLIENT_ID,
-  clientSecret: process.env.DEXCOM_CLIENT_SECRET,
-  callbackURL: "http://localhost:3000/auth/dexcom/callback"
-},
-function(accessToken, refreshToken, profile, cb) {
-  // In a production app, you might store these tokens in the user's session
-  return cb(null, { accessToken, refreshToken });
-}
+    authorizationURL: 'https://sandbox-api.dexcom.com/v2/oauth2/login',
+    tokenURL: 'https://sandbox-api.dexcom.com/v2/oauth2/token',
+    clientID: process.env.DEXCOM_CLIENT_ID,
+    clientSecret: process.env.DEXCOM_CLIENT_SECRET,
+    callbackURL: "http://localhost:3000/auth/dexcom/callback"
+  },
+  function(accessToken, refreshToken, profile, cb) {
+    // In a production app, you might store these tokens in the user's session
+    return cb(null, { accessToken, refreshToken });
+  }
 ));
 
 app.use(passport.initialize());
@@ -58,7 +61,6 @@ app.get(
   passport.authenticate('oauth2', { failureRedirect: '/login' }),
   async function (req, res) {
     // Successful authentication
-    console.log("yosdfe");
     const accessToken = req.user.accessToken;
     const refreshToken = req.user.refreshToken; 
     let evgsData  = await getEvgsData(accessToken);
@@ -69,7 +71,12 @@ app.get(
       myList.push(record.value);
     });
     console.log(myList);
-    res.render('dataAnalysis', { data1: myList });
+
+    // Calculate average
+    const average = calculateAverage(myList);
+    
+    res.render('dataAnalysis', { data1: myList, average: average }); // Pass average to the view
+
     console.log(req.user);
 
     //res.redirect('/');
@@ -83,8 +90,8 @@ app.listen(PORT, () => {
 
 async function getEvgsData(accessToken) {
   const query = new URLSearchParams({
-    startDate: '2022-02-06T09:12:35',
-    endDate: '2022-02-06T10:12:35'
+    startDate: '2022-02-07T00:00:00',
+    endDate: '2022-02-08T00:00:00'
   }).toString();
   
   const resp = await fetch(
@@ -98,4 +105,11 @@ async function getEvgsData(accessToken) {
   );
   
   return resp.json();
+}
+
+// Function to calculate the average
+function calculateAverage(data) {
+  const sum = data.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+  const average = Math.floor(sum / data.length);
+  return average;
 }
