@@ -8,6 +8,8 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 var path = require('path');
 
+app.use(express.static('views'));
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Passport configuration
