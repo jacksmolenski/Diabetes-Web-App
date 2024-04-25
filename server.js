@@ -47,7 +47,7 @@ passport.deserializeUser(function (user, done) {
 });
 
 // Express application routes
-app.get('', (req, res) => {
+app.get('/', (req, res) => {
   res.render('home');
 });
 
@@ -83,10 +83,6 @@ app.get(
     //res.redirect('/');
   }
 );
-
-app.get('/home', (req, res) => {
-  res.render('home');
-});
 
 app.get('/tips', (req, res) => {
   res.render('tips');
