@@ -47,7 +47,7 @@ passport.deserializeUser(function (user, done) {
 });
 
 // Express application routes
-app.get('/', (req, res) => {
+app.get('', (req, res) => {
   res.render('home');
 });
 
