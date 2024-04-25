@@ -88,6 +88,14 @@ app.get(
 app.get('/home', (req, res) => {
   res.render('home');
 });
+
+app.get('/tips', (req, res) => {
+  res.render('tips');
+});
+
+app.get('/story', (req, res) => {
+  res.render('story');
+});
 // Starting the server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
